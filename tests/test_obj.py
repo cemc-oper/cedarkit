@@ -1,7 +1,7 @@
 def test_reki_obj():
-    import reki
+    from reki.data_finder import find_local_file
 
-    assert callable(reki.from_source)
+    assert callable(find_local_file)
 
 
 def test_cedarkit_comp_obj():

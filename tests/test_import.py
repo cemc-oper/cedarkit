@@ -1,6 +1,6 @@
 def test_reki_import():
     import reki  # noqa
-    from reki import from_source  # noqa
+    from reki.data_finder import find_local_file  # noqa
 
 
 def test_cedarkit_comp_import():
