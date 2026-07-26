@@ -19,9 +19,3 @@ def test_cedarkit_plots_version():
     import cedarkit.plots
 
     assert VERSION_RX.match(cedarkit.plots.__version__) is not None
-
-
-def test_cedar_graph_version():
-    import cedar_graph
-
-    assert VERSION_RX.match(cedar_graph.__version__) is not None

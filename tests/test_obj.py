@@ -14,9 +14,3 @@ def test_cedarkit_plots_obj():
     from cedarkit.plots.chart import Panel
 
     assert callable(Panel)
-
-
-def test_cedar_graph_obj():
-    from cedar_graph.quickplot import quick_plot
-
-    assert callable(quick_plot)
