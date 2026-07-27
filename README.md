@@ -1,6 +1,10 @@
 # cedarkit
 
 ![Maturity-Sandbox](https://img.shields.io/badge/Maturity-Sandbox-F9D71C)
+![GitHub Release](https://img.shields.io/github/v/release/cemc-oper/cedarkit)
+![PyPI - Version](https://img.shields.io/pypi/v/cedarkit)
+![GitHub License](https://img.shields.io/github/license/cemc-oper/cedarkit)
+![GitHub Action Workflow Status](https://github.com/cemc-oper/cedarkit/actions/workflows/ci.yaml/badge.svg)
 
 `cedarkit` is the **meta package** of the cedarkit tool suite: it contains no
 code itself, but aggregates the component packages of the suite through its
