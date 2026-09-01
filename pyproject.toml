@@ -25,7 +25,7 @@ classifiers = [
 dependencies = [
     "reki>=2026.8.0,<2027",
     "cedarkit-comp>=2026.7.0,<2027",
-    "cedarkit-plots>=2026.8.0,<2027",
+    "cedarkit-plots>=2026.9.0,<2027",
 ]
 
 [project.urls]
