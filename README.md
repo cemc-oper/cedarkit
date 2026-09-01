@@ -49,9 +49,8 @@ uv pip install -e ".[test]"
 pytest
 ```
 
-The version is generated from git tags by `setuptools_scm` and written to
-`cedarkit/_version.py` at build time (used for build-time version stamping
-only; not shipped with the package).
+The version is generated from git tags by `setuptools_scm`; this meta package
+ships no module-level version file.
 
 ## LICENSE
 

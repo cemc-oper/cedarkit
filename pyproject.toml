@@ -21,12 +21,11 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.13",
 ]
 dependencies = [
-    "reki~=2026.7",
-    "cedarkit-comp~=2026.7",
-    "cedarkit-plots~=2026.7",
+    "reki>=2026.8.0,<2027",
+    "cedarkit-comp>=2026.7.0,<2027",
+    "cedarkit-plots>=2026.8.0,<2027",
 ]
 
 [project.urls]
@@ -43,7 +42,6 @@ test = ["pytest"]
 packages = []
 
 [tool.setuptools_scm]
-version_file = "cedarkit/_version.py"
 
 [tool.uv.sources]
 reki = { path = "../reki", editable = true }
