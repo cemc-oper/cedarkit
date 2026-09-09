@@ -41,6 +41,9 @@ test = ["pytest"]
 [tool.setuptools]
 packages = []
 
+[tool.setuptools.package-dir]
+"" = "src"
+
 [tool.setuptools_scm]
 
 [tool.uv.sources]
