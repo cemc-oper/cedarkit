@@ -61,25 +61,21 @@ from cedarkit.plots.chart import Panel
 print("cedarkit components are available")
 ```
 
-For CMADaaS-mounted GRIB data, use `reki` with the local `cmadaas` data class
-and the mount root:
+For CMADaaS-mounted GRIB data, declare a local `reki` source and select by
+UTC initialization time and forecast lead.
 
 ```python
 import reki
 
-reader = reki.from_source(
-    "local",
-    "cma_gfs_gmf/grib2/orig",
-    start_time="2025081900",
-    forecast_time="24h",
-    data_class="cmadaas",
-    storage_base="/CMADAAS",
-)
-t2m = reader.sel(
-    parameter="2t",
-    level_type="heightAboveGround",
-    level=2,
-).first().to_xarray()
+with reki.from_source(
+    {"kind": "local", "dataset": "cma_gfs_gmf", "root": "/CMADAAS"}
+) as source:
+    field = source.sel(
+        parameter="t2m",
+        time="2026-11-02T12:00:00Z",
+        step="PT6H",
+    ).one()
+    t2m = field.to_xarray()["t2m"]
 ```
 
 The mounted-directory workflow reads local files and does not require CMADaaS
