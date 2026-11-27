@@ -81,6 +81,27 @@ with reki.from_source(
 The mounted-directory workflow reads local files and does not require CMADaaS
 remote-service credentials.
 
+## 2026.11.0 release verification
+
+A clean Python 3.12.3 environment installed the meta package and then the
+plotting application from PyPI.
+
+```bash
+python -m pip install 'cedarkit==2026.11.0'
+python -m pip check
+python -m pip install 'cemc-plots-kit==2026.11.0'
+python -m pip check
+```
+
+The first install resolved `reki 2026.11.0`, `cedarkit-plots 2026.11.0`, and
+`cedarkit-comp 2026.7.0`. The second added `cedar-graph 2026.11.0` and
+`cemc-plots-kit 2026.11.0`. Both dependency checks passed.
+
+The installed application ran the tagged CMA-GFS temperature task against the
+mounted archive. It compiled the v3 recipe, read the 2 m temperature for the
+2026-11-02 12 UTC run at +6 h, and wrote a 1193 × 856 PNG.
+[CMA-GFS temperature task](https://github.com/cemc-oper/cemc-plots-kit/blob/v2026.11.0/examples/task-v2-gfs-t2m.yaml)
+
 ## Development
 
 In this workspace, the three components are configured as local editable
